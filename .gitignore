@@ -1,0 +1,122 @@
+# ============================================================
+# Data (large, not for repo)
+# ============================================================
+alpha_options_raw/
+alpha_corp_actions/
+alpha_intraday_raw/
+alpha_intraday_15m_raw/
+market_data/
+cache_iv/
+cache_iv_old/
+cache_options/
+om_data/
+om_chunks_local/
+output_to_github/
+alpha_options_enriched/
+exports/
+*.parquet
+*.csv
+*.tar.gz
+
+# ============================================================
+# Outputs -- ignore all, then whitelist selected results
+# ============================================================
+outputs/*
+!outputs/flagship_final/
+!outputs/flagship_suite_cboe/
+!outputs/earnings_iv_analysis.xlsx
+
+# Root-level generated xlsx (intermediate outputs)
+earnings_iv_panels_aggregated.xlsx
+earnings_iv_panels_by_ticker.xlsx
+
+# ============================================================
+# Exploration / internal iteration (not for public repo)
+# ============================================================
+
+# Old strategy suites
+flagship_strats.py
+flagship_strats_v2.py
+flagship_strats_v3.py
+flagship_strats_v4.py
+flagship_strats_v5.py
+flagship_strats_v6.py
+flagship_strats_v6_spy.py
+flagship_composite.py
+flagship_signals_research.py
+
+# Exploration suites
+qis_signals.py
+qis_v2_suite.py
+qis_v3_suite.py
+qis_v4_suite.py
+qis_v4_run4_suite.py
+run_qis_suite.py
+aggreg_strats.py
+
+# Test runners
+run_calendar_test.py
+run_dispersion_test.py
+run_dispersion_varswap_test.py
+
+# Data utilities / one-off scripts
+download_additional_data.py
+download_market_data_v3.py
+download_om_data.py
+download_om_fast.py
+download_om_fetch_tar.py
+download_om_parallel.py
+corp_action_ID-Strike_matching_check.py
+is_opt_data_split_adj.py
+realized_vol_intraday.py
+hedge_crisis_analysis.py
+iv_analysis_EXPLANATION.txt
+
+# Old single-file backtester (replaced by backtester/)
+backtester.py
+
+# Root-level copies of data pull scripts (moved to data_pulling/)
+/alpha_vantage_option_pull.py
+/alpha_vantage_pull_earnings.py
+/alpha_vantage_intraday_pull.py
+/enrich_options_bs.py
+/build_corporate_actions.py
+/PROJECT_GUIDE.md
+
+# Old backtester strategy iterations
+backtester/strategies/v2_strategies.py
+backtester/strategies/v3_strategies.py
+backtester/strategies/v4_strategies.py
+backtester/strategies/v4_run4_strategies.py
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ============================================================
+# IDE / editor
+# ============================================================
+.idea/
+.vscode/
+.claude/
+*.swp
+*.swo
+
+# ============================================================
+# Environment / misc
+# ============================================================
+.env
+.aider*
+nul
+*.tmp
+~$*
+.DS_Store
+Thumbs.db
+profiler_results.txt
